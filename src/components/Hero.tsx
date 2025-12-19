@@ -17,7 +17,7 @@ export default function Hero() {
               HELLO
             </p>
             <h1 style={{ margin: "0.5rem 0" }}>
-              I'm <span style={{ color: "#ffb300" }}>Kavya</span>
+              I'm <span style={{ color: "#ffb300" }}>Gayathri</span>
             </h1>
             <h3 style={{ marginTop: 0 }}>Junior Software Developer</h3>
             <p style={{ maxWidth: 720 }}>
@@ -35,7 +35,7 @@ export default function Hero() {
                 alignItems: "flex-start",
               }}
             >
-              <a href="mailto:pallipatekumarkavya@gmail.com" target="_blank">
+              <a href="mailto:gayathrisubramani03@gmail.com" target="_blank">
                 <button
                   style={{
                     padding: "12px 24px",
@@ -64,7 +64,7 @@ export default function Hero() {
                 style={{ display: "flex", gap: "1rem", alignItems: "center" }}
               >
                 <a
-                  href="mailto:pallipatekumarkavya@gmail.com"
+                  href="mailto:gayathrisubramani03@gmail.com"
                   target="_blank"
                   title="Email"
                 >
@@ -104,7 +104,7 @@ export default function Hero() {
                   </button>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/pallipatekumarkavya/"
+                  href="https://www.linkedin.com/in/gayathrisubramani03/"
                   target="_blank"
                   title="LinkedIn"
                 >
@@ -144,7 +144,7 @@ export default function Hero() {
                   </button>
                 </a>
                 <a
-                  href="https://github.com/Kavya-918"
+                  href="https://github.com/GayathriSubramani07"
                   target="_blank"
                   title="GitHub"
                 >
@@ -190,22 +190,22 @@ export default function Hero() {
         <AnimatedSection direction="right" delay={0.2}>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <img
-              src="/KavyaProfile.jpg"
-              alt="Kavya portrait"
+              src="/gayathri.jpg"
+              alt="Gayathri portrait"
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
                 const tried = (img.dataset.triedList || "")
                   .split(",")
                   .filter(Boolean);
                 const candidates = [
-                  "/KavyaProfile.jpg",
+                  "/gayathri.jpg",
                   "/profile.jpg",
                   "/profile.webp",
                   "/profile.jpeg",
                   "/profile.JPG",
-                  "/kavyaimg.webp",
-                  "/kavyaimg.jpg",
-                  "/kavyaimg.jpeg",
+                  "/gayathri.webp",
+                  "/gayathri.jpg",
+                  "/gayathri.jpeg",
                 ];
                 const next = candidates.find((c) => !tried.includes(c));
                 if (next) {

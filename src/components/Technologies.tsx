@@ -10,7 +10,7 @@ const technologies: Tech[] = [
     { name: 'HTML5', className: 'devicon-html5-plain colored' },
     { name: 'CSS3', className: 'devicon-css3-plain colored' },
     { name: 'JavaScript', className: 'devicon-javascript-plain colored' },
-    { name: 'React', className: 'devicon-react-original colored' }
+  
 ]
 
 export default function Technologies() {

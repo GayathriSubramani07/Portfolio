@@ -32,7 +32,7 @@ export const experience: Experience[] = [
         stack: ["Java", "Spring Boot", "MySQL", "REST API"]
       },
       {
-        name: "HRM (Human Resource Management) Platform",
+        name: "HRMS (Human Resource Management System) Platform",
         bullets: [
           "Designed end-to-end HRMS recruitment workflow: openings, submissions, screening, interviews, offers, onboarding, post-joining.",
           "Built Spring Boot REST APIs with JPA for employee management, agency onboarding, exam scheduling, and candidate tracking.",

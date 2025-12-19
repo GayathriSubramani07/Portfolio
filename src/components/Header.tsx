@@ -46,7 +46,7 @@ export default function Header({ focused, onSelect, onClear }: { focused?: strin
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 50, backdropFilter: 'blur(6px)' }}>
       <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem 1rem' }}>
-        <div style={{ fontWeight: 700 }}>Kavya</div>
+        <div style={{ fontWeight: 700 }}>Gayathri</div>
         <button aria-label="Menu" onClick={() => setOpen(!open)} style={{ display: 'none' }} id="menu-btn">☰</button>
         <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none', margin: 0, padding: 0 }}>
           {sections.map(s => (
