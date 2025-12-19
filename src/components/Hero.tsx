@@ -189,7 +189,7 @@ export default function Hero() {
         </AnimatedSection>
         <AnimatedSection direction="right" delay={0.2}>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img
+            {/* <img
               src="/gayathri.jpg"
               alt="Gayathri portrait"
               onError={(e) => {
@@ -227,7 +227,53 @@ export default function Hero() {
                 boxShadow: "0 10px 25px rgba(0,0,0,0.35)",
                 border: "2px solid #ffb300",
               }}
+            /> */}
+
+            <img
+              src={`${import.meta.env.BASE_URL}gayathri.jpg`}
+              alt="Gayathri portrait"
+              onError={(e) => {
+                const img = e.currentTarget as HTMLImageElement;
+
+                const tried = (img.dataset.triedList || "")
+                  .split(",")
+                  .filter(Boolean);
+
+                const base = import.meta.env.BASE_URL;
+
+                const candidates = [
+                  `${base}gayathri.jpg`,
+                  `${base}gayathri.webp`,
+                  `${base}gayathri.jpeg`,
+                  `${base}profile.jpg`,
+                  `${base}profile.webp`,
+                  `${base}profile.jpeg`,
+                  `${base}profile.JPG`,
+                ];
+
+                const next = candidates.find((c) => !tried.includes(c));
+
+                if (next) {
+                  tried.push(next);
+                  img.dataset.triedList = tried.join(",");
+                  img.src = next;
+                } else {
+                  console.warn(
+                    "Portrait image not found in public folder. Tried:",
+                    candidates
+                  );
+                }
+              }}
+              style={{
+                width: "300px",
+                height: "400px",
+                objectFit: "cover",
+                borderRadius: "12px",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.35)",
+                border: "2px solid #ffb300",
+              }}
             />
+
           </div>
         </AnimatedSection>
       </div>
