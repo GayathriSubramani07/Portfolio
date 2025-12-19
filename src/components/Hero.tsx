@@ -1,4 +1,6 @@
 import AnimatedSection from "./AnimatedSection";
+import gayathriImg from "../assets/gayathri.jpg";
+
 
 export default function Hero() {
   return (
@@ -189,48 +191,8 @@ export default function Hero() {
         </AnimatedSection>
         <AnimatedSection direction="right" delay={0.2}>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            {/* <img
-              src="/gayathri.jpg"
-              alt="Gayathri portrait"
-              onError={(e) => {
-                const img = e.currentTarget as HTMLImageElement;
-                const tried = (img.dataset.triedList || "")
-                  .split(",")
-                  .filter(Boolean);
-                const candidates = [
-                  "/gayathri.jpg",
-                  "/profile.jpg",
-                  "/profile.webp",
-                  "/profile.jpeg",
-                  "/profile.JPG",
-                  "/gayathri.webp",
-                  "/gayathri.jpg",
-                  "/gayathri.jpeg",
-                ];
-                const next = candidates.find((c) => !tried.includes(c));
-                if (next) {
-                  tried.push(next);
-                  img.dataset.triedList = tried.join(",");
-                  img.src = next;
-                } else {
-                  console.warn(
-                    "Portrait image not found in public folder. Tried:",
-                    candidates
-                  );
-                }
-              }}
-              style={{
-                width: "300px",
-                height: "400px",
-                objectFit: "cover",
-                borderRadius: "12px",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.35)",
-                border: "2px solid #ffb300",
-              }}
-            /> */}
-
             <img
-              src={`${import.meta.env.BASE_URL}gayathri.jpg`}
+              src={gayathriImg}
               alt="Gayathri portrait"
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
@@ -239,16 +201,15 @@ export default function Hero() {
                   .split(",")
                   .filter(Boolean);
 
-                const base = import.meta.env.BASE_URL;
-
                 const candidates = [
-                  `${base}gayathri.jpg`,
-                  `${base}gayathri.webp`,
-                  `${base}gayathri.jpeg`,
-                  `${base}profile.jpg`,
-                  `${base}profile.webp`,
-                  `${base}profile.jpeg`,
-                  `${base}profile.JPG`,
+                  gayathriImg,
+                  `${import.meta.env.BASE_URL}gayathri.jpg`,
+                  `${import.meta.env.BASE_URL}gayathri.webp`,
+                  `${import.meta.env.BASE_URL}gayathri.jpeg`,
+                  `${import.meta.env.BASE_URL}profile.jpg`,
+                  `${import.meta.env.BASE_URL}profile.webp`,
+                  `${import.meta.env.BASE_URL}profile.jpeg`,
+                  `${import.meta.env.BASE_URL}profile.JPG`,
                 ];
 
                 const next = candidates.find((c) => !tried.includes(c));
@@ -259,7 +220,7 @@ export default function Hero() {
                   img.src = next;
                 } else {
                   console.warn(
-                    "Portrait image not found in public folder. Tried:",
+                    "Portrait image not found. Tried:",
                     candidates
                   );
                 }
